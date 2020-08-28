@@ -99,9 +99,25 @@ The Dashboard houses the <code>advance options</code> tab and this tab contains 
 | Cyan           | ![#00ffff](https://via.placeholder.com/10/00ffff?text=+) `#00ffff` |
 
 
+
+
+
+## 🎨 Final Output [Snippet]
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1i.PNG?raw=true)
+
+>This shows the HTML code of your snippet, ready to be pasted into your email, blog or anywhere possible.
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1j.PNG?raw=true)
+
+>This shows a quick preview of the generated snippet. Comes in handy all the time.
+
+
 ## :pushpin: Requirements
 
 The web app is run on Python 3.7.2, Django 3.0.8 and Pygments 2.6.1. It has been tested live on Windows.
+
+
 
 ## 🛠 Installation & Set Up
 
@@ -133,13 +149,7 @@ A2. Create a virtual environment using your terminal, activate and return to the
    )
    ```
 
-3. Install dependencies
-
-   ```sh
-   yarn
-   ```
-
-4. Makemigrations & Run development server like so:
+3. Makemigrations & Run development server like so:
 
    ```sh
    python manage.py migrate && python manage.py runserver
