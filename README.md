@@ -58,12 +58,12 @@ code snippet.
 The Dashboard houses the <code>advance options</code> tab and this tab contains series of options like:
 
 
-| Options                | Functionality                                                 |
-| ---------------------  | ------------------------------------------------------------- |
-| Generator Initial Text | The initialization text for the generated HTML, Default(Yes)  | 
-| Line Number            | Insert line number in the generated snippet, Default(No)      |
-
-
+| Options                | Functionality                                                              |
+| ---------------------  | -------------------------------------------------------------------------- |
+| Generator Initial Text | The initialization text for the generated HTML, <em>Default(Yes)</em>      | 
+| Line Number            | Insert line number in the generated snippet, <em>Default(No)</em>          |
+| Line Number Color(sub) | Line number color, trigerred when LN is toggled on <em>Default(Dark)</em>  |
+| Border Color           | Color of the border with <em>Default(`#5c4d5c`)</em>                       |
 
 
 
