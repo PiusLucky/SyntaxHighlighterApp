@@ -1,0 +1,391 @@
+{% load static %}
+{% load limit_tags %}
+
+<!doctype html>
+<html class="no-js" lang="">
+       <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SnippetHighlighter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/icon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/icon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/icon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'img/icon/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static 'img/icon/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#9f00a7">
+        <meta name="msapplication-TileImage" content="{% static 'img/icon/mstile-144x144.png' %}">
+        <meta name="theme-color" content="#ff00cc">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+        <link rel="stylesheet" href="{% static 'css/light.min.css' %}">
+    </head>
+    <body class="body">
+    <a onclick="smoothScroll('nav')" class="scroll_top">
+      <div class="mini" tabindex="0.1" title="Scroll Up"><i class="fas fa-chevron-up"></i></div>
+    </a>
+    <div class="shield"></div>
+    <div class="output">
+        
+    </div>
+    <div class="modal-code">
+        <div class="close">
+            <svg class="times-size" viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true" class="css-1idynds"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+        </div>
+        <div class="copy-header">
+            <span class="click_code">View HTML code</span>|<span class="click_snippet">View Snippet</span>
+            <span class="underliner"></span>
+        </div>
+        <div class="code-body">
+            <div class="code-container">
+                <code class="code-content">
+
+                </code>
+                <code class="code-snippet invisible">
+
+                </code>
+            </div>
+            
+     
+        </div>
+        <div class="code-copy">
+            <button class="copy-btn"><svg class="svg-copy svg-1" viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true" class="css-yxiis9"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg><svg class="svg-copy svg-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; margin-right: 0.5rem;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>&nbsp;<span class="large-screen copied-text">Copy Code to Clipboard</span><span class="small-screen copied-text">Copy Code</span><span class="replaced-text">Copied successfully!</span></button>
+        </div>
+    </div>
+
+    <div class="svg-control">
+        <div class="svg-top">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFF" d="M39.4,-70.7C51.2,-61.3,61,-51.1,70.5,-39.2C80,-27.3,89.2,-13.6,88.8,-0.2C88.4,13.2,78.5,26.4,69.6,39.4C60.7,52.4,52.9,65.3,41.5,73.5C30.1,81.6,15,85.2,0.9,83.6C-13.2,82,-26.5,75.4,-38.4,67.5C-50.2,59.6,-60.7,50.4,-67.4,38.9C-74.2,27.4,-77.1,13.7,-77.9,-0.5C-78.8,-14.7,-77.7,-29.5,-70.7,-40.5C-63.7,-51.5,-50.9,-58.7,-38.2,-67.6C-25.4,-76.4,-12.7,-86.9,0.5,-87.8C13.8,-88.7,27.5,-80.1,39.4,-70.7Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        <div class="svg-top-lower">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#F2F4F8" d="M37.4,-62.9C45.5,-60.2,46.8,-44,51.1,-31.3C55.5,-18.5,62.9,-9.3,61.7,-0.7C60.5,7.9,50.8,15.8,44.7,25.5C38.6,35.2,36.1,46.8,29.3,49.1C22.4,51.4,11.2,44.5,2.4,40.3C-6.3,36.1,-12.7,34.5,-23.6,34.5C-34.5,34.6,-50.1,36.2,-53.3,30.7C-56.6,25.3,-47.6,12.6,-42.7,2.8C-37.8,-7,-37.2,-14,-37.3,-25.4C-37.4,-36.7,-38.4,-52.4,-32.3,-56.2C-26.2,-60,-13.1,-52,0.8,-53.4C14.7,-54.8,29.4,-65.6,37.4,-62.9Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+    </div>
+    <nav class="nav" id="nav">
+        <ul class="nav__ul">
+            <li class="logo">
+                <img src="{% static 'img/logo.svg' %}" class="logo__image">
+            </li>
+            <li class="api">
+                <a href="https://github.com/PiusLucky/SyntaxHighlighterApp" target="_blank" class="link-cleanser"><i class="fas fa-plug"></i> Contribute</a>
+           </li>
+        </ul>
+    </nav>
+    <div class="h-s">
+        <div class="h1_header">
+            <h1>Awesome <span class="pet">Snippet</span> Highlighter</h1>
+        </div>
+
+        
+        <div class="summary">
+            <span class="summary__ft">Snippet Highlighter</span> is a web application that converts raw source codes into fancy HTML that can be used directly
+            in your blog or anywhere you intend to drop a quick code snippet. The resultant code is relatively responsive and 
+            scalable. Advance customization is available in the <code class="code">advance options</code> below.
+        </div>
+    </div>
+
+
+    <div class="snip_form">
+        <p class="snip_form__p">Paste Snippet to Beautify <button class="clear-btn">clear</button></p>
+        <form name="form" method="POST"  enctype="multipart/form-data" class="central_form">
+            {% csrf_token %}
+            <div class="textarea">
+               <textarea name="textarea_field" required="" placeholder="Paste in code snippet..." spellcheck="false"></textarea>
+            </div>
+            <div class="options">
+               <a onclick="smoothScroll('submit-btn')" class="minimize"><div class="mini" tabindex="0.1" title="Scroll down"><i class="fas fa-chevron-down"></i></div></a>
+               <div class="stack" tabindex="0.2" title="Stack">Stack</div> 
+               <span class="editor" tabindex="0.3" title="Editor Style">Editor Style</span> 
+               <span class="a-opt" tabindex="0.4" title="Advance Options">Advance Options</span> 
+            </div> 
+            
+            <div class="extra-container">
+                <div class="stack_details">
+                        {% if lexers %}
+                        {% for each_item in lexers %}
+                        <span class="stack-items" id="{{each_item.0}}">
+                            {{each_item.1}}
+                        </span>
+                        {% endfor %}
+                        {% endif %}
+
+                </div> 
+
+                <div class="style_details">
+                    {% if editor_styles %} 
+                    {% for each_item in editor_styles %}
+                    <span class="style-items" id="{{each_item}}">
+                        {{each_item|title}} 
+                    </span>
+                    {% endfor %}
+                    {% endif %}    
+                </div> 
+
+               <div class="advance_opt">
+                <div class="aligner">
+                <div class="top_gs">
+                  <div class="gear">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <style type="text/css">
+                      .st0{fill:#002B3A;}
+                      .st1{fill:#F448DA;}
+                    </style>
+                    <circle class="st0" cx="256" cy="256" r="256"/>
+                    <g id="tinyPink">
+                      <path class="st1" d="M256,370.3c-63,0-114.3-51.3-114.3-114.3S193,141.7,256,141.7S370.3,193,370.3,256S319,370.3,256,370.3z
+                      M256,162.5c-51.6,0-93.5,42-93.5,93.5s42,93.5,93.5,93.5s93.5-42,93.5-93.5S307.6,162.5,256,162.5z"/>
+                    </g>
+                  </svg>
+                  </div>         
+                </div>
+                <div class="spacer">
+                    Generator initial text 
+                    <div class="ranger git">
+                        <input type="range" min="1" max="2" value="2" class="slider_style git_input"> 
+                        <div class="range_val git_value"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>   
+                 <div class="spacer">
+                    Line number
+                    <div class="ranger lnb">
+                        <input type="range" min="1" max="2" value="1" class="slider_style lnb_input"> 
+                        <div class="range_val lnb_value"><i class="fas fa-minus-circle"></i></div>
+                    </div>
+                 </div>
+                 <div class="line_nc">
+                      <div class="spacer">
+                         Line number Color (**optional) 
+                         <div class="ranger lnc">
+                             <input type="range" min="1" max="2" value="1" class="slider_style lnc_input"> 
+                             <div class="range_val lnc_value ln-styl">Dark</div>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                 <div class="spacer final-opts">
+                    <div class="border-s">
+                        <div>
+                            <div class="spacer space-wider"></div>
+                            <div><h4><i class="fas fa-plus-circle"></i> Other Options:</h4></div>
+                            <div class="spacer"></div>
+                            <div>
+                                <label for="dc-ex6"> Border Color</label>
+                                <div class="b-elem">
+                                    <div id="dc-ex6">
+                                        <div class="colorpicker-circle-anchor__color" data-color></div>
+                                    </div>
+                                </div>
+                                <small class="form-text text-muted">format: <code>rgba</code></small>
+                            </div>
+                             <div class="spacer space-more"></div>
+                             <div><h4><i class="fas fa-plus-circle"></i> Border Controls ('rem):</h4></div>
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Border Top width</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="btw"> 
+                                    <div class="range_val val-styl rem-styl val-radius"><span class="btwv">1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Border Right width</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="0.1" step="0.1" class="brw"> 
+                                    <div class="range_val val-styl rem-styl"><span class="brwv">0.1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Border Bottom width</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="bbw"> 
+                                    <div class="range_val val-styl rem-styl val-radius"><span class="bbwv">1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Border Left width</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="0.1" step="0.1" class="blw"> 
+                                    <div class="range_val val-styl rem-styl"><span class="blwv">0.1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer space-more"></div>
+                            <div><h4><i class="fas fa-plus-circle"></i> Border Radius ('rem):</h4></div>
+                            <div class="spacer next">
+                                <div class="ranger">
+                                    <input type="range" min="0" max="1" value="0.7" step="0.1" class="bdr"> 
+                                    <div class="range_val val-styl rem-styl val-radius"><span class="bdrv">0.7</span></div>
+                                </div>
+                            </div>
+                            
+
+                             <div class="spacer space-more"></div>
+                             <div><h4><i class="fas fa-plus-circle"></i> Padding Controls ('rem):</h4></div>
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Padding Top</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="pt"> 
+                                    <div class="range_val val-styl rem-styl"><span class="ptv">1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Padding Right</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="pr"> 
+                                    <div class="range_val val-styl rem-styl val-radius"><span class="prv">1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Padding Bottom</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="pb"> 
+                                    <div class="range_val val-styl rem-styl"><span class="pbv">1</span></div>
+                                </div>
+                            </div>
+
+                            <div class="spacer next">
+                                <label for="dc-ex6"> Padding Left</label>
+                                <div class="ranger">
+                                    <input type="range" min="0.1" max="1" value="1" step="0.1" class="pl"> 
+                                    <div class="range_val val-styl rem-styl val-radius"><span class="plv">1</span></div>
+                                </div>
+                            </div>
+
+
+                              
+                        </div>
+                    </div>
+                 </div>       
+               </div>
+
+            </div>
+            <div class="submit_div s-button1" id="submit-btn">
+              <button class="submit_btn" type="submit">
+                <i class="fas fa-check-circle"></i> 
+                 Beautify Code
+              </button>
+            </div> 
+            <div class="submit_div s-button2" id="submit-btn">
+              <button class="submit_btn" disabled>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg version="1.1" class="ajax-process" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="631px" height="114.8px" viewBox="0 0 631 114.8" style="enable-background:new 0 0 631 114.8;" xml:space="preserve">
+              <style type="text/css">
+                .sta0{fill:#FFFFFF;}
+              </style>
+              <g id="fG">
+                <circle id="firstBall" class="sta0" cx="51.5" cy="57" r="51.5"/>
+              </g>
+              <g id="sG">
+                <circle id="secondBall" class="sta0" cx="314" cy="57" r="51.5"/>
+              </g>
+              <g id="tG">
+                <circle id="thirdBall" class="sta0" cx="576.5" cy="57" r="51.5"/>
+              </g>      
+              </svg>
+              </button>
+            </div> 
+        </form>
+    </div>
+    <div class="lower_section">
+        <div class="info-section">
+            <div class="other_env"> 
+               <div class="other_products">
+                   <p class="other_products__hd"><i class="fas fa-braille"></i> Other Products</p>
+                   <div class="other_products__abt">
+                      <div class="other_products__abt">
+                        <div class="thesvg">
+                          <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="descr">
+                           Feel like converting your webpage to PDF? try <a href="https://webpagetopdf.herokuapp.com/" target="_blank" class="site">Webpagetopdf&nbsp;<i class="fas fa-external-link-alt"></i></a> and
+                           convert some stunning pages to pdf right on the go!    
+                        </div>
+                        
+                      </div>
+                          
+                   </div>
+                </div>
+                <br>
+                <div class="other_products">
+                   <div class="other_products__abt">
+                      <div class="other_products__abt">
+                        <div class="thesvg">
+                          <i class="fas fa-images"></i>
+                        </div>
+                        <div class="descr">
+                            Do you wonder how images looks when translated to base64 string, try <a href="https://imagebase64.herokuapp.com/" target="_blank" class="site">Imagebase64&nbsp;<i class="fas fa-external-link-alt"></i></a> and
+                            convert that image of yours to base64 string and the good part is, you can always decode the resulting base64 string back to the original image.       
+                        </div>             
+                      </div>                 
+                   </div>
+                </div>
+
+            </div>
+
+            <div class="other_products contact">
+                <p class="other_products__hd"><i class="fas fa-braille"></i> Reach Out Now!</p>
+                <div class="other_products__abt">
+                   <div class="other_products__abt">
+                     <div class="thesvg">
+                       <i class="fas fa-at"></i>
+                     </div>
+                     <div class="descr">
+                       Feel like reaching out? shoot us a mail at <a href="mail:luckypius50@gmail.com"><span class="site">luckypius50@gmail.com</span></a>    
+                     </div>
+                     
+                   </div>
+                       
+                </div>
+             </div>
+
+             <div class="other_products contact">
+                 <p class="other_products__hd"><i class="fas fa-braille"></i> What's Next?</p>
+                 <div class="other_products__abt">
+                    <div class="other_products__abt">
+                      <div class="thesvg">
+                        <i class="fas fa-question"></i>
+                      </div>
+                      <div class="descr">
+                       We look forward to building more robust apps in the future.                              
+                       </div>   
+                    </div>
+                           
+                 </div>
+                 
+                 
+              </div>
+
+        </div>
+        <hr class="hr">
+        <div class="footer">
+            <div class="pos_enjoy">
+              <span class="enjoy">
+                  <i class="fas fa-check-circle"></i>&nbsp;Enjoy Syntax Highlighter v1.0.1
+              </span>  
+            </div>
+            <div class="copyright">&copy;&nbsp;<span class="footer__year"></span> Pius Lucky</div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/default-picker.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% include 'extras/extra.html' %}
+    </body>
+</html>
+
+<!-- domain -->
+<!-- http://syntaxhighlightcode.com/ -->
+
+

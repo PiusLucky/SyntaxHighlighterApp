@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="302px" height="209px" viewBox="0 0 302 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>left-circles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="landing-page" transform="translate(-25.000000, -90.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Oval" transform="translate(25.000000, 69.000000)">
+                <g id="left-circles" transform="translate(-127.000000, -20.000000)">
+                    <path d="M272.403833,406.566754 C348.619128,406.566754 433.875175,342.272593 433.875175,266.057297 C433.875175,189.842002 356.69639,117.496068 280.481095,117.496068 C204.265799,117.496068 134.403833,192.351458 134.403833,268.566754 C134.403833,344.782049 196.188537,406.566754 272.403833,406.566754 Z" id="Oval-Copy-5" opacity="0.22" transform="translate(284.139504, 262.031411) rotate(20.000000) translate(-284.139504, -262.031411) "></path>
+                    <path d="M150.672204,269.981385 C206.729106,269.981385 281.486959,242.983417 281.486959,186.926515 C281.486959,130.869613 220.6492,53.0612915 164.592298,53.0612915 C108.535396,53.0612915 41.5557179,120.040969 41.5557179,176.097871 C41.5557179,232.154774 94.6153021,269.981385 150.672204,269.981385 Z" id="Oval-Copy-6" opacity="0.09" transform="translate(161.521338, 161.521338) rotate(-225.000000) translate(-161.521338, -161.521338) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

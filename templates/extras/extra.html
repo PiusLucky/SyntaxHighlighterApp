@@ -1,0 +1,145 @@
+<script type="text/javascript">
+    $(".central_form").submit(function(e) {
+        e.preventDefault();
+        var serialized_form = $(this).serialize();
+        $(".s-button1").addClass("hide-submitBtn")
+        $(".s-button2").addClass("show-submitBtn")
+        $(".code-copy").html(`
+           <button class="copy-btn">
+               <svg class="svg-copy svg-1" viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true" class="css-yxiis9"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg><svg class="svg-copy svg-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; margin-right: 0.5rem;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>&nbsp;<span class="large-screen copied-text">Copy Code to Clipboard</span><span class="small-screen copied-text">Copy Code</span><span class="replaced-text">Copied successfully!</span>
+           </button>
+        `)
+        $(".scroll_top").addClass("hide-copy-btn")
+        $('.click_code').addClass("underline_me")
+        $.ajax({
+            type: "POST",
+            url: "{% url 'main:post_data' %}",
+            data: {serialized_form, csrfmiddlewaretoken: "{{csrf_token}}"},
+            dataType: "json",
+            success: function(success_data) {
+                const html_code = $(success_data.data.html_code)
+                const upper_style = `${success_data.data.upper_style}`
+                const theme_background = `${success_data.data.theme_background}`
+                const comment_check = $(success_data.data.html_code).length
+                line_number_check = `${success_data.data.line_number}`
+                line_number_color_check = `${success_data.data.line_number_color}`  
+   
+                if(line_number_check == "true"){
+                  const old_pre = '<table><tbody><tr><td><pre style="margin: 0; line-height: 125%">'
+                  if(line_number_color_check == "light"){
+                   var new_pre = '<table><tbody><tr><td><pre style="margin: 0; line-height: 125%; color: rgba(224, 217, 236, 0.5)!important; padding-right: 1.5rem;">'
+                  }else{
+                   var new_pre = '<table><tbody><tr><td><pre style="margin: 0; line-height: 125%; padding-right: 1.5rem;">'
+                  }  
+                  const open_upper_div = `<div style="background:${theme_background}; ${upper_style}">`
+                  const close_upper_div = `</div>`
+
+                  if(comment_check > 1){
+                    const div_pre = html_code[2].innerHTML
+                    html_code[2].innerHTML = div_pre.replace(old_pre, new_pre);
+                    const pre = html_code[2].innerHTML              
+                    const first_comment = `<!-- ${html_code[0].textContent} -->`
+                    const last_comment = `<!-- ${html_code[4].textContent} -->`
+                    const new_html = `${first_comment} ${open_upper_div} ${pre} ${close_upper_div} ${last_comment}`
+                    $(".code-content").text(new_html).removeClass('hide-copy-btn')
+                  }else{
+                    const div_pre = html_code[0].innerHTML
+                    html_code[0].innerHTML = div_pre.replace(old_pre, new_pre);
+                    const pre = html_code[0].innerHTML 
+                    const new_html =  `${open_upper_div} ${pre} ${close_upper_div}`
+                    $(".code-content").text(new_html).removeClass('hide-copy-btn')
+                  }
+                }else{
+                  $(".code-content").text(`${success_data.data.html_code}`).removeClass('hide-copy-btn')
+                }
+
+                $('.modal-code').addClass('show-modal')
+                $('.shield').addClass('show-modal')
+                $('body').addClass('overflow-stopped')
+                $(window).scrollTop(0)
+                const modalHeight = $(".modal-code")[0].clientHeight
+                const modalWidth = $(".modal-code")[0].clientWidth
+                if(modalHeight || modalWidth != 0){
+                    $(".s-button1").removeClass("hide-submitBtn")
+                    $(".s-button2").removeClass("show-submitBtn")
+                    window.addEventListener('click', function(event){
+                        try {
+                          if(document.getElementsByClassName("show-modal")[0].contains(event.target)){
+                            uponClose()
+                          }
+                        } catch(e) {
+                            return;
+                        }    
+                    })
+                }
+                
+                $('.code-snippet').removeClass('visible')
+                $('.modal-code').removeClass('modal-code-new')
+
+                const line_no = `${success_data.data.line_number_color}`
+                         
+                $('.click_code').on("click", function(event){
+                  event.preventDefault()
+                  $(this).addClass('underline_me')
+                  $('.code-content').removeClass('hide-copy-btn')
+                  $('.code-snippet').removeClass('visible').removeClass('code-snippet-new')         
+                  $('.click_snippet').removeClass('underline_me')
+                  $('.modal-code').removeClass('modal-code-new')
+                })
+
+                $('.click_snippet').on("click", function(event){
+                  event.preventDefault()
+                  $('.code-content').addClass('hide-copy-btn')
+                  $('.code-snippet').addClass('visible').html(`${success_data.data.html_code}`).addClass('code-snippet-new')
+                  $(this).addClass('underline_me')
+                  $('.click_code').removeClass('underline_me')                 
+                  $('.modal-code').addClass('modal-code-new')
+                  
+                 const line_number_color = $("table > tbody > tr > td:nth-child(1) > pre")
+                  if(line_no == 'light') {
+                    line_number_color.addClass("lightcolor").addClass("padding-r")
+                  }else{
+                    line_number_color.removeClass("lightcolor").addClass("padding-r")
+                  }
+                  
+                })
+            
+                function uponClose(){
+                    $('.modal-code').removeClass('show-modal')
+                    $('.shield').removeClass('show-modal')
+                    $('body').removeClass('overflow-stopped')
+                    $( ".copy-btn" ).remove();
+                    $('.click_snippet').removeClass('underline_me')
+                    $(".scroll_top").removeClass("hide-copy-btn")
+                }
+                
+                $('.close').on("click", function(event){
+                  event.preventDefault()
+                  uponClose()
+                })
+
+                $(".copy-btn").on("click", function(){
+                  $( ".svg-1" ).toggle();
+                  if($( ".svg-1" ).is(":visible")){
+                    $(".svg-2").removeClass("show-copy-btn");
+                    $(".copied-text").removeClass("hide-copy-btn");
+                    $(".replaced-text").removeClass("show-copy-btn");
+                  }else{
+                    const code = $(".code-content")[0].textContent
+                    navigator.clipboard.writeText(code)         
+                      $(".svg-2").addClass("show-copy-btn");
+                      $(".copied-text").addClass("hide-copy-btn");
+                      $(".replaced-text").addClass("show-copy-btn");
+                    setTimeout(function(){
+                      $( ".copy-btn" ).trigger( "click" );          
+                    },2000);
+                  } 
+                  })
+            },
+            error: function(error_data) {
+                   console.log(error_data)                  
+                }
+        })
+
+    })
+</script>
