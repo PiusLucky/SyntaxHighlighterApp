@@ -67,15 +67,26 @@ The Dashboard houses the <code>advance options</code> tab and this tab contains 
 
 
 
-### Algorithms, ML
-There has to be a way to get the job done, not just finding the way but also putting effectiveness and efficiency forward. Machine learning algorithms are best for stand-alone actions taken without explicitly instructing the computer to do so.
+## :pushpin: Border Controls
 
-### Free Projects (+ source code )
-We offer majority of our projects for free with all source codes available on github for download. Specifically meant for non-patreons.
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1d.PNG?raw=true)
+
+>Here, you can customize the border width which include manipulating the <code>border-top-width</code>, <code>border-right-width</code>, <code>border-bottom-width</code> and <code>border-left-width</code>.
 
 
-### Premium
-Premium projects consist of all project materials, source codes, prototypes. Cheapest hosting ideas and domain name purchases for our patreons who also get access to sensitive materials as well as 24/7 support from our dedicated team of software engineers.
+## :pushpin: Border Radius
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1e.PNG?raw=true)
+
+>Here, you can customize the radius of the border, takes in value between 0 and 1.
+
+
+## :pushpin: Padding Controls
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1f.PNG?raw=true)
+
+>Here, you can customize the padding which include manipulating the <code>padding-top-width</code>, <code>padding-right-width</code>, <code>padding-bottom-width</code> and <code>padding-left-width</code>.
+
 
 
 ## Color Scheme
