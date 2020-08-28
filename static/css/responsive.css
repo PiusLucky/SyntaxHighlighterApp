@@ -302,6 +302,7 @@ h4 {
 
 .modal-code-shift {
     top: 15%;
+    transition: all 250ms ease-out;
 }
 
 
