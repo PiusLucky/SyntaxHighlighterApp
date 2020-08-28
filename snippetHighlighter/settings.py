@@ -11,9 +11,11 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = False
 
-ALLOWED_HOSTS = [os.environ['ALLOWED_HOST_1']
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOST_1']]
 
-ADMINS = ("Pius Lucky", os.environ['ADMIN_EMAIL'])
+ADMINS = (
+    ("Pius Lucky", os.environ['ADMIN_EMAIL']),
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
