@@ -34,12 +34,22 @@ Snippet Highlighter is a web application that converts raw source codes into fan
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
 
-Creating web interfaces, APIs, Backends, Algorithms, Scripts are insanely fun and satisfying, but can be difficult as well. Our main goal is to break down these heinous tasks simply plain.
 
-## Available Categories
+The dashboard displays the input field, stacks, styles and advance options. Each of these categories are extremely useful in outputting a more human-driven 
+code snippet. 
 
-### User Interface / User Experience
-UI/UX brings boring codes to live, it comes first, a project with proper visualization is way respected compared to another with saggy visuals. We intend making you a UI Expert.
+## Stack [Languages]
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
+
+The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, Go and so on...
+
+### Styles [Themes]
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1c.PNG?raw=true)
+
+We support 50+ themes including most popular theme like monokai (a default theme for the Sublime text editor)
+
 
 ### Backend
 The userface is nothing without a clean and functional backend. The complexities and logic behind the scenes as well as building <code>APIS</code> which are wired with server-side programming languages like Python, NodeJS, ReactJS..
