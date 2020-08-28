@@ -99,19 +99,38 @@ The Dashboard houses the <code>advance options</code> tab and this tab contains 
 | Cyan           | ![#00ffff](https://via.placeholder.com/10/00ffff?text=+) `#00ffff` |
 
 
+## :pushpin: Requirements
+
+The web app is run on Python 3.7.2, Django 3.0.8 and Pygments 2.6.1. It has been tested live on Windows.
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+A1. Navigate to the root directory [directory that contains <code>manage.py</code>]
+
+A2. Create a virtual environment using your terminal, activate and return to the root folder.
 
    ```sh
-   npm install -g gatsby-cli
+   virtualenv MyVirtualEnviroment && cd MyVirtualEnviroment/Scripts && activate && cd ../..
+   ```
+1. Install packages in requirements.txt
+   
+   ```sh
+   pip install -r requirements.txt
    ```
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+2. Navigate to the settings.py file and adjust the settings file like so:
 
-   ```sh
-   nvm install
+   Replace:
+
+   ```python
+   "contents in settings.py"
+   ```
+   
+   With:
+   
+    ```python
+   "contents in local-settings.py"
+   )
    ```
 
 3. Install dependencies
@@ -120,10 +139,10 @@ The Dashboard houses the <code>advance options</code> tab and this tab contains 
    yarn
    ```
 
-4. Start the development server
+4. Makemigrations & Run development server like so:
 
    ```sh
-   npm start
+   python manage.py migrate && python manage.py runserver
    ```
 
 ## Author
@@ -144,7 +163,7 @@ Please ⭐️ this repository if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [Pius Lucky](https://github.com/PiusLucky).<br />
-This project is [MIT](https://github.com/PiusLucky/joint-access-programmer-Pro-/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/LICENSE) licensed.
 
 <div align="right">
     <b><a href="#top">↥ Back To Top</a></b>
