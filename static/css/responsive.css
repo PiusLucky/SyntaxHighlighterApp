@@ -296,7 +296,7 @@ h4 {
 
 .modal-code {
     top: 22%;
-    left: .365rem;
+    left: .335rem;
     width: 97%;
 }
 
@@ -307,6 +307,16 @@ h4 {
 .code-content {
     font-size: .8rem;
 }
+
+div.code-body > 
+div > 
+code.code-snippet.invisible.visible.code-snippet-new > 
+div {
+  width: 83vw!important;
+  margin-left: -1.0rem!important;
+  font-size: .8rem!important;
+}
+
 
 
 }
@@ -430,3 +440,6 @@ h4 {
 
 
 }
+
+
+
