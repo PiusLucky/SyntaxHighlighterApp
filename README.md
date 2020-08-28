@@ -20,10 +20,11 @@ Snippet Highlighter is a web application that converts raw source codes into fan
      <a href="https://img.shields.io/pypi/l/ansicolortags.svg">
        <img alt="Version" src="https://img.shields.io/pypi/l/ansicolortags.svg" />
     </a>
-  .. image:: https://github.com/pygments/pygments/workflows/Pygments/badge.svg
-   :target: https://github.com/pygments/pygments/actions?query=workflow%3APygments
+ 
 </p>
-
+ .. image:: https://github.com/pygments/pygments/workflows/Pygments/badge.svg
+   :target: https://github.com/pygments/pygments/actions?query=workflow%3APygments
+   
 ![demo](https://github.com/PiusLucky/joint-access-programmer-Pro-/blob/master/static/asset/img/dashboard.png?raw=true)
 
 ## About JointAccessProgrammer.com
