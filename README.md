@@ -27,37 +27,45 @@ Snippet Highlighter is a web application that converts raw source codes into fan
  
 </p>
 
-<div>
-</div>
 
-## The Dashboard
+## :pushpin: The Dashboard
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
 
 >The dashboard displays the input field, stacks, styles and advance options. Each of these categories are extremely useful in outputting a more human-driven 
 code snippet. 
 
-<div>
-</div>
 
-## Stack [Languages]
+## :pushpin: Stack [Languages]
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
 
->The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, <code>Go</code> and so on...
+>The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, <code>Go</code>, <code>Swift</code>, <code>PHP</code> and so on...
 
-<div>
-</div>
 
-### Styles [Themes]
+
+### 🎨 Styles [Themes]
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1c.PNG?raw=true)
 
->We support 50+ themes including most popular theme like monokai (a default theme for the Sublime text editor)
+>We support 50+ themes including most popular theme like monokai (a default theme for the Sublime text editor). Others include <code>Vim</code>, <code>Vs</code>, <code>Emacs</code> e.t.c.
 
 
-### Backend
-The userface is nothing without a clean and functional backend. The complexities and logic behind the scenes as well as building <code>APIS</code> which are wired with server-side programming languages like Python, NodeJS, ReactJS..
+### 🎨 Advance Options
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1d.PNG?raw=true)
+
+The Dashboard houses the <code>advance options</code> tab and this tab contains series of options like:
+
+
+| Options                | Functionality                                                 |
+| ---------------------  | ------------------------------------------------------------- |
+| Generator Initial Text | The initialization text for the generated HTML, Default(Yes)  | 
+| Line Number            | Insert line number in the generated snippet, Default(No)      |
+
+
+
+
 
 ### Algorithms, ML
 There has to be a way to get the job done, not just finding the way but also putting effectiveness and efficiency forward. Machine learning algorithms are best for stand-alone actions taken without explicitly instructing the computer to do so.
