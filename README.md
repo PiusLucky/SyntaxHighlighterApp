@@ -8,7 +8,7 @@ Snippet Highlighter is a web application that converts raw source codes into fan
   Turn that code snippet into a beauty!
 </h1>
 <p align="center">
- Syntax highlighter made specifically for <a href="https://www.joint-access-programmer.com/">Web Developers</a>.
+ Syntax highlighter made specifically for <a href="https://snippet2html.herokuapp.com/">Web Developers</a>.
 </p>
 <p align="center">
     <a href="https://github.com/pygments/pygments/workflows/Pygments/badge.svg">
@@ -28,9 +28,11 @@ Snippet Highlighter is a web application that converts raw source codes into fan
 </p>
 
    
-![demo](https://github.com/PiusLucky/joint-access-programmer-Pro-/blob/master/static/asset/img/dashboard.png?raw=true)
 
-## About JointAccessProgrammer.com
+
+## The Dashboard
+
+![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
 
 Creating web interfaces, APIs, Backends, Algorithms, Scripts are insanely fun and satisfying, but can be difficult as well. Our main goal is to break down these heinous tasks simply plain.
 
