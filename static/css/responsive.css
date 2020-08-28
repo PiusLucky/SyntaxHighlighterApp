@@ -317,6 +317,18 @@ div {
   font-size: .8rem!important;
 }
 
+.padding-r {
+    padding-right: .6rem;
+}
+
+table > 
+tbody > 
+tr > 
+td:nth-child(1) > 
+pre {
+  margin-left: -1rem!important;
+}
+
 
 
 }
