@@ -28,20 +28,27 @@ Snippet Highlighter is a web application that converts raw source codes into fan
 </p>
 
    
-
+<br>
+<br>
+<br>
 
 ## The Dashboard
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
-
-
+<br>
+<br>
+<br>
 The dashboard displays the input field, stacks, styles and advance options. Each of these categories are extremely useful in outputting a more human-driven 
 code snippet. 
-
+<br>
+<br>
+<br>
 ## Stack [Languages]
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
-
+<br>
+<br>
+<br>
 The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, Go and so on...
 
 ### Styles [Themes]
