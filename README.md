@@ -33,7 +33,10 @@ Snippet Highlighter is a web application that converts raw source codes into fan
 <br>
 
 ## The Dashboard
-
+   
+<br>
+<br>
+<br>
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
 <br>
 <br>
@@ -44,7 +47,10 @@ code snippet.
 <br>
 <br>
 ## Stack [Languages]
-
+   
+<br>
+<br>
+<br>
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
 <br>
 <br>
