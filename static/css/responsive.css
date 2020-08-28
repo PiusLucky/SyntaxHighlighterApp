@@ -318,7 +318,7 @@ div {
 }
 
 .padding-r {
-    padding-right: .6rem;
+    padding-right: .6rem!important;
 }
 
 table > 
