@@ -74,7 +74,7 @@
                 }
                 
                 $('.code-snippet').removeClass('visible')
-                $('.modal-code').removeClass('modal-code-new')
+                $('.modal-code').removeClass('modal-code-new').removeClass("modal-code-shift")
 
                 const line_no = `${success_data.data.line_number_color}`
                          
@@ -84,7 +84,7 @@
                   $('.code-content').removeClass('hide-copy-btn')
                   $('.code-snippet').removeClass('visible').removeClass('code-snippet-new')         
                   $('.click_snippet').removeClass('underline_me')
-                  $('.modal-code').removeClass('modal-code-new')
+                  $('.modal-code').removeClass('modal-code-new').removeClass("modal-code-shift")
                 })
 
                 $('.click_snippet').on("click", function(event){
@@ -93,7 +93,7 @@
                   $('.code-snippet').addClass('visible').html(`${success_data.data.html_code}`).addClass('code-snippet-new')
                   $(this).addClass('underline_me')
                   $('.click_code').removeClass('underline_me')                 
-                  $('.modal-code').addClass('modal-code-new')
+                  $('.modal-code').addClass('modal-code-new').addClass("modal-code-shift")
                   
                  const line_number_color = $("table > tbody > tr > td:nth-child(1) > pre")
                   if(line_no == 'light') {

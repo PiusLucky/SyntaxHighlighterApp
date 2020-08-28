@@ -295,11 +295,14 @@ h4 {
 }
 
 .modal-code {
-    top: 25%;
+    top: 22%;
     left: .4rem;
     width: 97%;
 }
 
+.modal-code-shift {
+    top: 15%;
+}
 
 
 }
