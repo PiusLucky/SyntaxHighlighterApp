@@ -2,7 +2,7 @@
 Snippet Highlighter is a web application that converts raw source codes into fancy HTML that can be used directly in your blog or anywhere you intend to drop a quick code snippet. The resultant code is relatively responsive and scalable.
 
 <p align="center">
-  <img alt="SHA Logo" src="https://github.com/PiusLucky/joint-access-programmer-Pro-/blob/master/static/asset/img/Jap_Youtube_Logo.png?raw=true" width="100" />
+  <img alt="SHA Logo" src="https://raw.githubusercontent.com/PiusLucky/SyntaxHighlighterApp/master/staticfiles/img/logo.svg" width="100" />
 </p>
 <h1 align="center">
   Turn that code snippet into a beauty!
@@ -11,6 +11,9 @@ Snippet Highlighter is a web application that converts raw source codes into fan
  Syntax highlighter made specifically for <a href="https://www.joint-access-programmer.com/">Web Developers</a>.
 </p>
 <p align="center">
+    <a href="https://github.com/pygments/pygments/workflows/Pygments/badge.svg">
+       <img alt="Version" src="https://github.com/pygments/pygments/workflows/Pygments/badge.svg" />
+    </a>
     <a href="https://img.shields.io/website-up-down-green-red/http/shields.io.svg">
        <img alt="Version" src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg" />
     </a>
@@ -20,9 +23,7 @@ Snippet Highlighter is a web application that converts raw source codes into fan
      <a href="https://img.shields.io/pypi/l/ansicolortags.svg">
        <img alt="Version" src="https://img.shields.io/pypi/l/ansicolortags.svg" />
     </a>
-     <a href="https://github.com/pygments/pygments/workflows/Pygments/badge.svg">
-       <img alt="Version" src="https://github.com/pygments/pygments/workflows/Pygments/badge.svg" />
-    </a>
+     
  
 </p>
 
