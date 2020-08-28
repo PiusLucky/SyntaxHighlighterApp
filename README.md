@@ -1,5 +1,5 @@
 # SyntaxHighlighterApp
-Snippet Highlighter is a web application that converts raw source codes into fancy HTML that can be used directly in your blog or anywhere you intend to drop a quick code snippet. The resultant code is relatively responsive and scalable.
+Snippet Highlighter is a web application that converts raw source codes into fancy HTML that can be used directly in your blog or anywhere you intend to drop a quick code snippet. The generated code is relatively responsive and scalable.
 
 <p align="center">
   <img alt="SHA Logo" src="https://raw.githubusercontent.com/PiusLucky/SyntaxHighlighterApp/master/staticfiles/img/logo.svg" width="100" />
