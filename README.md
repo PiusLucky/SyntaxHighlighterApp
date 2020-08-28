@@ -32,7 +32,7 @@ Snippet Highlighter is a web application that converts raw source codes into fan
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1.PNG?raw=true)
 
-The dashboard displays the input field, stacks, styles and advance options. Each of these categories are extremely useful in outputting a more human-driven 
+>The dashboard displays the input field, stacks, styles and advance options. Each of these categories are extremely useful in outputting a more human-driven 
 code snippet. 
 
 
@@ -41,13 +41,14 @@ code snippet.
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
 
-The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, Go and so on...
+>The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, Go and so on...
+
 
 ### Styles [Themes]
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1c.PNG?raw=true)
 
-We support 50+ themes including most popular theme like monokai (a default theme for the Sublime text editor)
+>We support 50+ themes including most popular theme like monokai (a default theme for the Sublime text editor)
 
 
 ### Backend
@@ -96,3 +97,6 @@ Please ⭐️ this repository if this project helped you!
 Copyright © 2020 [Pius Lucky](https://github.com/PiusLucky).<br />
 This project is [MIT](https://github.com/PiusLucky/joint-access-programmer-Pro-/blob/master/LICENSE) licensed.
 
+<div align="right">
+    <b><a href="#top">↥ Back To Top</a></b>
+</div>
