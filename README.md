@@ -146,7 +146,6 @@ A2. Create a virtual environment using your terminal, activate and return to the
    
     ```python
    "contents in local-settings.py"
-   )
    ```
 
 3. Migrate & Run development server like so:
