@@ -25,16 +25,26 @@ def postData(request):
     for key in request.POST:  
       textarea_field.append(request.POST[key])
     textarea_field = unquote(textarea_field[0].split("&")[-1].split("=")[-1])
-    lexer = request.COOKIES["CurrentLanguage"]
-    style = request.COOKIES["CurrentStyle"]
-    line_number = request.COOKIES["LineNumber"]
-    line_number_color = request.COOKIES["LineNumberColor"]
-    generator_initial_text = request.COOKIES["GeneratorInitialText"]
-    border_color = request.COOKIES["BorderColor"]
-    border_width = request.COOKIES["BorderWidth"]
-    border_radius = request.COOKIES["BorderRadius"]
-    padding = request.COOKIES["Padding"]
-
+    defaults = {
+      "language": "js", 
+      "style": "default",
+      "type": "dark",
+      "git": "true",
+      "lnb": "false",
+      "bdclr": "rgb(92, 77, 92);",
+      "bdwidth": "1rem .1rem 1rem .1rem",
+      "bdr": ".7rem",
+      "pdd": "1rem"
+    }
+    lexer = request.COOKIES["CurrentLanguage"] or defaults["language"]
+    style = request.COOKIES["CurrentStyle"] or defaults["style"]
+    line_number = request.COOKIES["LineNumber"] or defaults["lnb"]
+    line_number_color = request.COOKIES["LineNumberColor"] or defaults["type"]
+    generator_initial_text = request.COOKIES["GeneratorInitialText"] or defaults["git"]
+    border_color = request.COOKIES["BorderColor"] or defaults["bdclr"]
+    border_width = request.COOKIES["BorderWidth"] or defaults["bdwidth"]
+    border_radius = request.COOKIES["BorderRadius"] or defaults["bdr"]
+    padding = request.COOKIES["Padding"] or defaults["pdd"]
     if generator_initial_text == "true":
       generator_initial_text = True
     else:

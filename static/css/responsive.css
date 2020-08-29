@@ -454,4 +454,17 @@ pre {
 }
 
 
+@media only screen and (max-width: 480px){
+.cookie-banner.active {
+    left: 0;
+    bottom: 0;
+}
+.cookie-banner {
+    border-radius: 0;
+    padding: 30px;
+    left: 0;
+    max-width: 100%;
+}
+
+}
 
