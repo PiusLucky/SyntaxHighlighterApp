@@ -36,6 +36,7 @@ def postData(request):
       "bdr": ".7rem",
       "pdd": "1rem"
     }
+
     lexer = request.COOKIES["CurrentLanguage"] or defaults["language"]
     style = request.COOKIES["CurrentStyle"] or defaults["style"]
     line_number = request.COOKIES["LineNumber"] or defaults["lnb"]

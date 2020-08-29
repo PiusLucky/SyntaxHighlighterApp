@@ -65,6 +65,15 @@ $(document).ready(function() {
   currentFinder(all_style, current_style_id)
 
   
+  if(current_lexer_id == undefined){
+   cookieMaker(language, "js")
+   $("#js").addClass("current")
+  }
+
+  if(current_style_id == undefined){
+   cookieMaker(style, "monokai")
+   $("#monokai").addClass("current")
+  }
 
   function slider(main, cls, i1, i2, int){
     $('body').on("change", `.${main}`, function() {
