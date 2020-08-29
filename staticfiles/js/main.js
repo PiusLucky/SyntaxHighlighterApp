@@ -264,6 +264,7 @@ $('.close').on("click", function(event){
   event.preventDefault()
   $('.modal-code').removeClass('show-modal')
   $('.shield').removeClass('show-modal').removeClass('overflow-stopped')
+  $('body').bind('touchmove', function(e){e.preventDefault()})
   $('body').removeClass('overflow-stopped')
 })
 

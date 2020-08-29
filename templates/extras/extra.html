@@ -55,6 +55,7 @@
 
                 $('.modal-code').addClass('show-modal')
                 $('.shield').addClass('show-modal').addClass('overflow-stopped')
+                $('body').bind('touchmove', function(e){e.preventDefault()})
                 $('body').addClass('overflow-stopped')
                 $(window).scrollTop(0)
                 const modalHeight = $(".modal-code")[0].clientHeight
@@ -107,6 +108,7 @@
                 function uponClose(){
                     $('.modal-code').removeClass('show-modal')
                     $('.shield').removeClass('show-modal').removeClass('overflow-stopped')
+                    $('body').unbind('touchmove')
                     $('body').removeClass('overflow-stopped')
                     $( ".copy-btn" ).remove();
                     $('.click_snippet').removeClass('underline_me')
