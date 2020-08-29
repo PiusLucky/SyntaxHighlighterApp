@@ -121,6 +121,8 @@ The web app is run on Python 3.7.2, Django 3.0.8 and Pygments 2.6.1. It has been
 
 ## 🛠 Installation & Set Up
 
+A0. Download or clone the repository
+
 A1. Navigate to the root directory [directory that contains <code>manage.py</code>]
 
 A2. Create a virtual environment using your terminal, activate and return to the root folder.
