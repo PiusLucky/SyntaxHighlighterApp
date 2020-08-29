@@ -33,8 +33,9 @@ $(document).ready(function() {
   //default styling
   $(".stack_details").addClass("show-now");
   $(".stack").addClass("border-adder");
-
-
+  
+  //default functionality
+  $(".clear-btn").on("click", function(){form.reset()})
   var colorPickerDefaultCustomAnchorInline = new ColorPicker.Default('#dc-ex6', {
     color: 'rgb(92, 77, 92)',
     inline: true,
