@@ -8,7 +8,7 @@ Snippet Highlighter is a web application that converts raw source codes into fan
   Turn that code snippet into a beauty!
 </h1>
 <p align="center">
- Syntax highlighter made specifically for <a href="https://snippet2html.herokuapp.com/">Web Developers</a>.
+ Syntax highlighter made specifically for <a href="https://snippet2html.herokuapp.com/">Developers</a>.
 </p>
 <p align="center">
     <a href="https://github.com/pygments/pygments/workflows/Pygments/badge.svg">
@@ -40,7 +40,7 @@ code snippet.
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1b.PNG?raw=true)
 
->The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as pprovided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, <code>Go</code>, <code>Swift</code>, <code>PHP</code> and so on...
+>The stack section within the dashboard allows you to choose any programming language of choice, this allows for flexibility over automation. We feature 500+ programming languages as provided by the <b>Pygment</b> library. Some of the top languages include <code>Python</code>, <code>Javascript</code>, <code>C</code>, <code>C#</code>, <code>Java</code>, <code>Ruby</code>, <code>Kotlin</code>, <code>Go</code>, <code>Swift</code>, <code>PHP</code> and so on...
 
 
 
@@ -55,15 +55,15 @@ code snippet.
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1d.PNG?raw=true)
 
-The Dashboard houses the <code>advance options</code> tab and this tab contains series of options like:
+The Dashboard houses the <code>advance options</code> tab and it contains series of options like:
 
 
-| Options                | Functionality                                                              |
-| ---------------------  | -------------------------------------------------------------------------- |
-| Generator Initial Text | The initialization text for the generated HTML, <em>Default(Yes)</em>      | 
-| Line Number            | Insert line number in the generated snippet, <em>Default(No)</em>          |
-| Line Number Color(sub) | Line number color, trigerred when LN is toggled on <em>Default(Dark)</em>  |
-| Border Color           | Color of the border with <em>Default(`#5c4d5c`)</em>                       |
+| Options                | Functionality                                                               |
+| ---------------------  | --------------------------------------------------------------------------  |
+| Generator Initial Text | The initialization text for the generated HTML, <em>Default(Yes)</em>       | 
+| Line Number            | Insert line number in the generated snippet, <em>Default(No)</em>           |
+| Line Number Color(sub) | Line number color, trigerred when LN is toggled on, <em>Default(Dark)</em>  |
+| Border Color           | Color of the border with <em>Default(`#5c4d5c`)</em>                        |
 
 
 
@@ -71,14 +71,14 @@ The Dashboard houses the <code>advance options</code> tab and this tab contains 
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1d.PNG?raw=true)
 
->Here, you can customize the border width which include manipulating the <code>border-top-width</code>, <code>border-right-width</code>, <code>border-bottom-width</code> and <code>border-left-width</code>.
+>Here, you can customize the border-width which include manipulating the <code>border-top-width</code>, <code>border-right-width</code>, <code>border-bottom-width</code> and <code>border-left-width</code>.
 
 
 ## :pushpin: Border Radius
 
 ![demo](https://github.com/PiusLucky/SyntaxHighlighterApp/blob/master/static/screenshots/page1e.PNG?raw=true)
 
->Here, you can customize the radius of the border, takes in value between 0 and 1.
+>Here, you can customize the radius of the border, takes in value between 0 and 1 (in 'rem').
 
 
 ## :pushpin: Padding Controls
@@ -121,6 +121,8 @@ The web app is run on Python 3.7.2, Django 3.0.8 and Pygments 2.6.1. It has been
 
 ## 🛠 Installation & Set Up
 
+A0. Download or clone the repository
+
 A1. Navigate to the root directory [directory that contains <code>manage.py</code>]
 
 A2. Create a virtual environment using your terminal, activate and return to the root folder.
@@ -146,10 +148,9 @@ A2. Create a virtual environment using your terminal, activate and return to the
    
     ```python
    "contents in local-settings.py"
-   )
    ```
 
-3. Makemigrations & Run development server like so:
+3. Migrate & Run development server like so:
 
    ```sh
    python manage.py migrate && python manage.py runserver
