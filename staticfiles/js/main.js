@@ -263,7 +263,7 @@ $(".a-opt").on("click", function(){
 $('.close').on("click", function(event){
   event.preventDefault()
   $('.modal-code').removeClass('show-modal')
-  $('.shield').removeClass('show-modal')
+  $('.shield').removeClass('show-modal').removeClass('overflow-stopped')
   $('body').removeClass('overflow-stopped')
 })
 

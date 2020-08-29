@@ -806,7 +806,6 @@ code {
   border-radius: 1rem;
   padding: 1rem 0rem;
   padding-bottom: 2.5rem;
-  overflow: hidden!important;
   animation: shiftInFrames ease 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
@@ -828,7 +827,11 @@ code {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode:forwards;
 
+}
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 .shield {
@@ -842,7 +845,6 @@ code {
   height: auto;
   background: #000;
   opacity: .7;
-  overflow: hidden!important;
 }
 
 
@@ -1104,6 +1106,7 @@ code {
 }
 
 .overflow-stopped {
+  height: 100%;
   overflow: hidden;
 }
 

@@ -1,21 +1,19 @@
 import os
-import dj_database_url
-import django_heroku
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
-SECRET_KEY = os.environ['SECRET_KEY']
 
-DEBUG = False
+# This is a fake SECRET_KEY
+SECRET_KEY = 'ijk0ov8d7xvaf+l+nw^241wy(_6$z3au4tq6y$h$zyb$xolp0j'
 
-ALLOWED_HOSTS = [os.environ['ALLOWED_HOST_1']]
 
-ADMINS = (
-    ("Pius Lucky", os.environ['ADMIN_EMAIL']),
-)
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,7 +27,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -39,8 +36,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'snippetHighlighter.urls'
-
-CSRF_FAILURE_VIEW = "main.views.csrf_byepass"
 
 TEMPLATES = [
     {
@@ -61,13 +56,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'snippetHighlighter.wsgi.application'
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -96,23 +91,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+  os.path.join(BASE_DIR, 'staticfiles'),
 )
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
-django_heroku.settings(locals())
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-X_FRAME_OPTIONS = 'DENY'
