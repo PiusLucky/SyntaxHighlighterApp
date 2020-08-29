@@ -1105,12 +1105,6 @@ code {
   }
 }
 
-.overflow-stopped {
-  height: 100%;
-  overflow: hidden;
-}
-
-
 
 .space-wider {
   margin-top: 3rem;
