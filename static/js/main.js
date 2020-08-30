@@ -34,6 +34,7 @@ $(document).ready(function() {
   $(".stack_details").addClass("show-now");
   $(".stack").addClass("border-adder");
   
+  
   //default functionality
   $(".clear-btn").on("click", function(){form.reset()})
   var colorPickerDefaultCustomAnchorInline = new ColorPicker.Default('#dc-ex6', {
@@ -50,20 +51,7 @@ $(document).ready(function() {
   const all_stack  = $(".stack-items")
   const all_style = $(".style-items")
 
-  function currentFinder(elem, getId){
-    for(var i = 0; i < elem.length; i++) {
-      const all_elem_object = $(elem[i])
-      const available_elem_id = all_elem_object[0].id
-      if(getId == available_elem_id){
-        const current_id = available_elem_id
-        $(`#${current_id}`).addClass("current")
-      }
-    }
-  }
   
-  currentFinder(all_stack, current_lexer_id)
-  currentFinder(all_style, current_style_id)
-
   
   if(current_lexer_id == undefined){
    cookieMaker(language, "js")
@@ -189,6 +177,23 @@ function tagger(target){
 
 tagger("stack-items")
 tagger("style-items")
+
+
+
+function currentFinder(elem, getId){
+  for(var i = 0; i < elem.length; i++) {
+    const all_elem_object = $(elem[i])
+    const available_elem_id = all_elem_object[0].id
+    const available_elem_class = all_elem_object[0].classList[1]
+    if(getId == available_elem_id){
+      const current_id = available_elem_id
+      $(`.${available_elem_class}`).addClass("current")
+    }
+  }
+}
+
+currentFinder(all_stack, current_lexer_id)
+currentFinder(all_style, current_style_id)
 
 
 
