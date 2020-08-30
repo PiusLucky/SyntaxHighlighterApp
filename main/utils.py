@@ -65,11 +65,7 @@ class DefaultStyle:
        self.brdr = brdr
 
     def get_style(self):
-      return "border:solid {0};border-width: {1};padding: {2};border-radius: {3};".format(self.border_clr, 
-                                                                                          self.border_wth, 
-                                                                                          self.padding, 
-                                                                                          self.brdr
-                                                                                          )
+      return "border:solid {0};border-width: {1};padding: {2};border-radius: {3};".format(self.border_clr, self.border_wth, self.padding, self.brdr)
 
 
 class InsertLinesIntoHtml:

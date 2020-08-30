@@ -36,16 +36,21 @@ def postData(request):
       "bdr": ".7rem",
       "pdd": "1rem"
     }
+    
+    def cookieRequest(name, val):
+      cookie_request = request.COOKIES[name] or defaults[val]
+      return cookie_request
 
-    lexer = request.COOKIES["CurrentLanguage"] or defaults["language"]
-    style = request.COOKIES["CurrentStyle"] or defaults["style"]
-    line_number = request.COOKIES["LineNumber"] or defaults["lnb"]
-    line_number_color = request.COOKIES["LineNumberColor"] or defaults["type"]
-    generator_initial_text = request.COOKIES["GeneratorInitialText"] or defaults["git"]
-    border_color = request.COOKIES["BorderColor"] or defaults["bdclr"]
-    border_width = request.COOKIES["BorderWidth"] or defaults["bdwidth"]
-    border_radius = request.COOKIES["BorderRadius"] or defaults["bdr"]
-    padding = request.COOKIES["Padding"] or defaults["pdd"]
+    lexer = cookieRequest("CurrentLanguage", "language")
+    style = cookieRequest("CurrentStyle", "style")
+    line_number = cookieRequest("LineNumber", "lnb")
+    line_number_color = cookieRequest("LineNumberColor", "type")
+    generator_initial_text = cookieRequest("GeneratorInitialText", "git")
+    border_color = cookieRequest("BorderColor", "bdclr")
+    border_width = cookieRequest("BorderWidth", "bdwidth")
+    border_radius = cookieRequest("BorderRadius", "bdr")
+    padding = cookieRequest("Padding", "pdd")
+
     if generator_initial_text == "true":
       generator_initial_text = True
     else:
