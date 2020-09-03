@@ -32,6 +32,14 @@ html {
 
 }
 
+.html-paused {
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+}
+
 .nav {
   margin-right: 1rem;
   position: relative;
