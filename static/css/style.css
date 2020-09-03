@@ -829,7 +829,7 @@ code {
 
 }
 
-.stop-scrolling {
+.overflow-stopped {
   height: 100%;
   overflow: hidden;
 }
