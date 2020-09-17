@@ -8,7 +8,7 @@ Snippet Highlighter is a web application that converts raw source codes into fan
   Turn that code snippet into a beauty!
 </h1>
 <p align="center">
- Syntax highlighter made specifically for <a href="https://snippet2html.herokuapp.com/">Developers</a>.
+ Syntax highlighter made specifically for <a href="https://www.syntax-highlighter.joint-access-programmer.com/">Developers</a>.
 </p>
 <p align="center">
     <a href="https://github.com/pygments/pygments/workflows/Pygments/badge.svg">
